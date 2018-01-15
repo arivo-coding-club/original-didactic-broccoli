@@ -1,4 +1,4 @@
-package mission03;
+package mission03.correction;
 
 import java.util.Scanner;
 

@@ -1,6 +1,12 @@
-package mission03;
+package mission03.model;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.StringJoiner;
+
+import mission03.game.Player;
 
 /**
  * Created by newt.on on 2018. 1. 12..

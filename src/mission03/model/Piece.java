@@ -1,4 +1,6 @@
-package mission03;
+package mission03.model;
+
+import mission03.game.Player;
 
 /**
  * Created by newt.on on 2018. 1. 12..

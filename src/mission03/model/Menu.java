@@ -1,4 +1,4 @@
-package mission03;
+package mission03.model;
 
 /**
  * Created by newt.on on 2018. 1. 15..

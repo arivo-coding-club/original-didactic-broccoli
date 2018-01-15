@@ -1,7 +1,10 @@
-package mission03;
+package mission03.model;
 
 import java.util.List;
 import java.util.Scanner;
+
+import mission03.game.Player;
+import mission03.game.Tool;
 
 /**
  * Created by newt.on on 2018. 1. 11..

@@ -1,4 +1,4 @@
-package mission03;
+package mission03.game;
 
 import java.util.Scanner;
 

@@ -4,6 +4,11 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
+import mission03.game.ComputerGameMode;
+import mission03.game.LocalGameMode;
+import mission03.game.Tool;
+import mission03.model.Menu;
+
 /**
  * Created by newt.on on 2018. 1. 11..
  */
