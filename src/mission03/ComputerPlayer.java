@@ -25,7 +25,12 @@ public class ComputerPlayer implements Player {
 
     @Override
     public void waitReady() {
-
+        System.out.println("컴퓨터 플레이어를 세팅하고 있습니다...");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
