@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
+import mission03.game.BettingMode;
 import mission03.game.ComVsComGameMode;
 import mission03.game.ComputerGameMode;
 import mission03.game.ComputerVsComputer;
@@ -16,20 +17,20 @@ import mission03.model.Menu;
  * Created by newt.on on 2018. 1. 11..
  */
 public class TicTacToeCui {
-    private Tool tool;
+	private Tool tool;
 
     private Map<String, Menu> mainMenu;
 
     private boolean exit;
 
-    void init() {
+    private void init() {
         this.tool = new Tool(new Scanner(System.in));
         this.mainMenu = new TreeMap<>();
 
         initMenu();
     }
 
-    void initMenu() {
+    private void initMenu() {
         mainMenu.put("1", new Menu("1", "Local Mode") {
             @Override
             protected void onSelected() {
@@ -66,6 +67,13 @@ public class TicTacToeCui {
 			}
         	
         });
+        
+        mainMenu.put("6", new Menu("6", "Betting Mode") {
+            @Override
+            protected void onSelected() {
+                new BettingMode(tool).start();
+            }
+        });
 
         mainMenu.put("Q", new Menu("Q", "종료") {
             @Override
@@ -93,7 +101,7 @@ public class TicTacToeCui {
         }
     }
 
-    String printMainMenuAndSelect() {
+    private String printMainMenuAndSelect() {
         System.out.println("모드를 선택해 주세요.");
         mainMenu.forEach((key, menu) -> {
             System.out.println(key + ". " + menu.getText());

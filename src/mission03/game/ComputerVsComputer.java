@@ -23,14 +23,14 @@ public class ComputerVsComputer implements Player {
 
     @Override
     public String getSymbol() {
-        return "S";
+        return "T";
     }
 
     public void ComputerVsComputer2() {
     	//currentTimeMillis()이 무슨 뜻인가요?
         random = new Random(System.currentTimeMillis());
     }
-    
+
     @Override
     public void waitReady() {
         System.out.println("컴퓨터 플레이어를 세팅하고 있습니다...");
