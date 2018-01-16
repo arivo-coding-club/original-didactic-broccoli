@@ -23,12 +23,22 @@ public class ComputerVsComputer implements Player {
 
     @Override
     public String getSymbol() {
-        return "S";
+        return "T";
     }
 
     public void ComputerVsComputer2() {
     	//currentTimeMillis()이 무슨 뜻인가요?
         random = new Random(System.currentTimeMillis());
+    }
+
+    @Override
+    public String getName2() {
+        return "Computer2";
+    }
+
+    @Override
+    public String getSymbol2() {
+        return "T";
     }
     
     @Override
