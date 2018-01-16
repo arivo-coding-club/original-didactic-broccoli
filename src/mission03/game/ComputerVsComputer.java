@@ -8,24 +8,29 @@ import mission03.model.Position;
 /**
  * Created by newt.on on 2018. 1. 12..
  */
-public class ComputerPlayer implements Player {
+public class ComputerVsComputer implements Player {
     private Random random;
 
-    public ComputerPlayer() {
+    ComputerVsComputer() {
     	//currentTimeMillis()이 무슨 뜻인가요?
         random = new Random(System.currentTimeMillis());
     }
 
     @Override
     public String getName() {
-        return "Computer";
+        return "SecondComputer";
     }
 
     @Override
     public String getSymbol() {
-        return "C";
+        return "S";
     }
 
+    public void ComputerVsComputer2() {
+    	//currentTimeMillis()이 무슨 뜻인가요?
+        random = new Random(System.currentTimeMillis());
+    }
+    
     @Override
     public void waitReady() {
         System.out.println("컴퓨터 플레이어를 세팅하고 있습니다...");
@@ -43,19 +48,8 @@ public class ComputerPlayer implements Player {
     }
 
 	@Override
-	public String getName2() {
-		// TODO Auto-generated method stub
-		return "Computer2";
-	}
-
-	@Override
-	public String getSymbol2() {
-		// TODO Auto-generated method stub
-		return "T";
-	}
-
-	@Override
 	public void ComputerVsComputer() {
 		random = new Random(System.currentTimeMillis());
+		
 	}
 }

@@ -11,5 +11,8 @@ public interface Player {
     String getName();
     String getSymbol();
     void waitReady();
+    String getName2();
+    String getSymbol2();
+    void ComputerVsComputer();
     Position play(List<Position> emptyPositions);
 }

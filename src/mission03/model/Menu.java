@@ -3,6 +3,7 @@ package mission03.model;
 /**
  * Created by newt.on on 2018. 1. 15..
  */
+//Comparable<Menu>가 어디있는건지 모르겠어요ㅠㅠ
 public abstract class Menu implements Comparable<Menu> {
     private String key;
 
@@ -25,6 +26,7 @@ public abstract class Menu implements Comparable<Menu> {
     }
 
     @Override
+    //compareTo(Menu o)의 위치를 모르겠어요 
     public int compareTo(Menu o) {
         return key.compareTo(o.key);
     }
