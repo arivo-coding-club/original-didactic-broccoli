@@ -15,11 +15,6 @@ public class LocalPlayer implements Player {
 
     private String symbol;
 
-	private String name2;
-
-	private String symbol2;
-
-
     public LocalPlayer(Tool tool, String name, String symbol) {
         this.tool = tool;
         this.name = name;
@@ -46,19 +41,4 @@ public class LocalPlayer implements Player {
     public String getSymbol() {
         return this.symbol;
     }
-
-	@Override
-	public void ComputerVsComputer() {
-	}
-
-	@Override
-	public String getName2() {
-		return this.name2;
-	}
-
-	@Override
-	public String getSymbol2() {
-		// TODO Auto-generated method stub
-		return this.symbol2;
-	}
 }

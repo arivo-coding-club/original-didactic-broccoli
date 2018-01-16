@@ -41,21 +41,4 @@ public class ComputerPlayer implements Player {
     public Position play(List<Position> emptyPositions) {
         return emptyPositions.get(random.nextInt(emptyPositions.size()));
     }
-
-	@Override
-	public String getName2() {
-		// TODO Auto-generated method stub
-		return "Computer2";
-	}
-
-	@Override
-	public String getSymbol2() {
-		// TODO Auto-generated method stub
-		return "T";
-	}
-
-	@Override
-	public void ComputerVsComputer() {
-		random = new Random(System.currentTimeMillis());
-	}
 }

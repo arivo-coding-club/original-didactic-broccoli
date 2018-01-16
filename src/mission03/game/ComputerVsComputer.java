@@ -46,10 +46,4 @@ public class ComputerVsComputer implements Player {
     public Position play(List<Position> emptyPositions) {
         return emptyPositions.get(random.nextInt(emptyPositions.size()));
     }
-
-	@Override
-	public void ComputerVsComputer() {
-		random = new Random(System.currentTimeMillis());
-		
-	}
 }
