@@ -7,6 +7,7 @@ import java.util.TreeMap;
 import mission03.game.ComVsComGameMode;
 import mission03.game.ComputerGameMode;
 import mission03.game.ComputerVsComputer;
+import mission03.game.ComputerVsComputerGameMode;
 import mission03.game.LocalGameMode;
 import mission03.game.Tool;
 import mission03.model.Menu;
@@ -57,8 +58,16 @@ public class TicTacToeCui {
                 new ComVsComGameMode(tool).start();
             }
         });
+        
+        mainMenu.put("5", new Menu("5", "Computer vs Computer Mode") {
+			@Override
+			protected void onSelected() {
+				new ComputerVsComputerGameMode(tool).start();
+			}
+        	
+        });
 
-        mainMenu.put("5", new Menu("5", "종료") {
+        mainMenu.put("Q", new Menu("Q", "종료") {
             @Override
             protected void onSelected() {
                 System.out.println("게임을 종료합니다.");
