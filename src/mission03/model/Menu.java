@@ -30,4 +30,9 @@ public abstract class Menu implements Comparable<Menu> {
     public int compareTo(Menu o) {
         return key.compareTo(o.key);
     }
+    
+    @Override
+    public String toString() {
+    		return key + ": " + text;
+    }
 }
