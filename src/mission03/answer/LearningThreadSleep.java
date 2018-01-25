@@ -79,6 +79,11 @@ public class LearningThreadSleep {
 		Thread 잠 = new Thread(() -> { // Java 8 의 lambda 표현, 위 new Runnable()..과 똑같은 역
 				for(int i = 0 ; i < 10 ; i++) {
 					System.out.println(Thread.currentThread().getName() + " 잔다.");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 				}
 		}, "잠 스레드");
 		
@@ -94,6 +99,8 @@ public class LearningThreadSleep {
 		공부.start();
 		게임.start();
 		잠.start();
+		
+		System.out.println("thread 출력 완료");
 		
 		// 이 클래스를 실행해보면 알겠지만, 코드에 있는 순서인 공부 -> 게임 -> 잠 의 순서가 아니라
 		// 동시에 작업을 해요. 이 순서는 운영체제와 CPU가 결정하게 되어있고, 스레드의 우선순위를 조금 조정할 수는 있어요.
