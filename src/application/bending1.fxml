@@ -11,7 +11,6 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <TextField fx:id="result" alignment="CENTER" prefHeight="150.0" prefWidth="580.0" text="" />
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
             <ImageView fitHeight="150.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
@@ -42,9 +41,9 @@
          <children>
             <ButtonBar prefHeight="76.0" prefWidth="556.0">
                <buttons>
-                  <Button minWidth="0.0" mnemonicParsing="false" onAction="#operator" prefHeight="23.0" prefWidth="351.0" text="2800" />
-                  <Button minWidth="56.0" mnemonicParsing="false" onAction="#operator" prefHeight="23.0" text="3000" />
-                  <Button mnemonicParsing="false" onAction="#operator" prefHeight="23.0" text="3500" />
+                  <Button minWidth="0.0" mnemonicParsing="false" onAction="#beverage" prefHeight="23.0" prefWidth="351.0" text="2800" />
+                  <Button minWidth="56.0" mnemonicParsing="false" onAction="#beverage" prefHeight="23.0" text="3000" />
+                  <Button mnemonicParsing="false" onAction="#beverage" prefHeight="23.0" text="3500" />
                </buttons>
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
@@ -83,14 +82,14 @@
             <Insets />
          </VBox.margin>
       </HBox>
-      <TextField text="                  녹차라떼(Hot)                              녹차라떼(Ice)                                    버블 추가" />
+      <TextField text="                  녹차라떼(Hot)                              녹차라떼(Ice)                                버블 추가" />
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <ButtonBar prefHeight="31.0" prefWidth="580.0">
+            <ButtonBar prefHeight="47.0" prefWidth="560.0">
                <buttons>
-                  <Button minWidth="0.0" mnemonicParsing="false" onAction="#operator" prefHeight="23.0" prefWidth="351.0" text="2500" />
-                  <Button minWidth="56.0" mnemonicParsing="false" onAction="#operator" prefHeight="23.0" text="2800" />
-                  <Button mnemonicParsing="false" onAction="#operator" prefHeight="23.0" text="500" />
+                  <Button minWidth="0.0" mnemonicParsing="false" onAction="#beverage" prefHeight="23.0" prefWidth="351.0" text="2500" />
+                  <Button minWidth="56.0" mnemonicParsing="false" onAction="#beverage" prefHeight="23.0" text="2800" />
+                  <Button mnemonicParsing="false" onAction="#beverage" prefHeight="23.0" text="500" />
                </buttons>
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
@@ -98,16 +97,23 @@
             </ButtonBar>
          </children>
       </HBox>
+      <TextField text="                      결제완료                                  거스름돈                                 [ 판 매 중 ]" />
       <ButtonBar prefHeight="100.0" prefWidth="600.0">
          <buttons>
-            <Button minWidth="0.0" mnemonicParsing="false" onAction="#select" prefHeight="51.0" prefWidth="351.0" text="추가선택" />
-            <Button minWidth="56.0" mnemonicParsing="false" onAction="#select" prefHeight="52.0" text="선택완료" />
-            <Button mnemonicParsing="false" onAction="#paymentOption" prefHeight="51.0" text="5000원 투입" />
-            <Button mnemonicParsing="false" onAction="#paymentOption" prefHeight="51.0" text="10000원 투입" />
+            <Button minWidth="56.0" mnemonicParsing="false" onAction="#beverage" prefHeight="52.0" text="사용불가버튼" />
+            <Button mnemonicParsing="false" onAction="#change" prefHeight="51.0" text="반환" />
+            <TextField fx:id="result" alignment="CENTER" prefHeight="100.0" prefWidth="426.0" text="금액을 투입하세요"/>
          </buttons>
          <VBox.margin>
             <Insets left="10.0" right="10.0" />
          </VBox.margin>
+      </ButtonBar>
+      <TextField text="                               지폐 투입구                                                            카드 결제" />
+      <ButtonBar prefHeight="100.0" prefWidth="600.0">
+         <buttons>
+            <Button minWidth="0.0" mnemonicParsing="false" onAction="#push" prefHeight="51.0" prefWidth="351.0" text="5000" />
+            <Button minWidth="56.0" mnemonicParsing="false" onAction="#push" prefHeight="52.0" text="10000" />
+         </buttons>
       </ButtonBar>
    </children>
 </VBox>
