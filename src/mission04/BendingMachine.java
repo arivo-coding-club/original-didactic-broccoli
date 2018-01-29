@@ -2,83 +2,78 @@ package mission04;
 
 import java.util.*;
 
-public class BendingMachine {
+public class BendingMachine extends Casher{
+	int inputtedMoney = 0;
+	
+	public static void main(String[] args) throws Exception {
+		BendingMachine bendingMachine = new BendingMachine();
+		bendingMachine.start();
+	}
+	
+	public void start() {
+		//start가 실행되면 음료의 메뉴와 가격을 보여줍니다
+		System.out.println(Beverage.show());
 
-	public static void main(String[] args) {
-		System.out.println("<<음료 자판기>>");
-		HashMap map = new HashMap();
-		
-		map.put("초코오레오", new Integer(2800));
-		map.put("바닐라오레오", new Integer(2800));
-		map.put("민트오레오", new Integer(3000));
-		
-		map.put("피치망고요거트", new Integer(2800));
-		map.put("블루베리요거트", new Integer(2800));
-		map.put("리얼피치망고", new Integer(3000));
-		map.put("리얼블루베리", new Integer(3000));
-		
-		map.put("초코씨리얼", new Integer(2800));
-
-		Set set = map.entrySet();
-		Iterator it = set.iterator();
-		
-		while(it.hasNext()) {
-			for(int i = 1; i < map.size()+1; i++) {
-			Map.Entry e = (Map.Entry)it.next();
-				System.out.println(i+"."+e.getKey()+"스무디 "+e.getValue()+"원");
-			}
-		}
-		Scanner smoothieName = new Scanner(System.in);
-		
-		while(true) {
-			System.out.println("----스무디 이름을 입력하세요----");
-			String choosed = smoothieName.nextLine().trim();
-			//int needMoney = (int) map.get(choosed);
+		while(true) {			
+			System.out.println("===금액을 투입하세요===(숫자로만 입력)");
 			
-			if(!map.containsKey(choosed)) {
-				System.out.println("선택하신 스무디는 존재하지 않습니다. 다시 입력해주세요");
+			//금액을 입력받습니다
+			inputtedMoney = getInput();
+			
+			
+			//만약, 7을 입력할 경우 거스름돈을 반환하고 프로그램을 종료합니다
+			if(isExitCommand(inputtedMoney)) {
+				System.out.println(remainedMoney+"원을 반환합니다. 안녕히 가십시오");
+				break;
+			} 
+			
+			//투입한 금액을 표시하고, 추후에 추가 투입 금액이 있을 경우 추가합니다
+			System.out.println(inputtedMoney+"원을 투입했습니다");
+			addMoney(inputtedMoney);
+			howMuchRemain();
+			
+			//투입한 금액이 음료를 선택하기 위한 최소값(2800)보다 적은지 판단합니다
+			if(isTooLess(remainedMoney)) {
+				System.out.println("음료를 선택하기 위해서는 최소 2800원이 필요합니다.");
 				continue;
-			} else {
-				System.out.println(choosed+"스무디를 선택했습니다");
-				System.out.println(map.get(choosed)+"원 결제방법을 선택하세요");
-				int needMoney = (int) map.get(choosed);
-				
-				System.out.println("1. 현금");
-				System.out.println("2. 카드");
-				
-				Scanner payNumber = new Scanner(System.in);
-				String pay = payNumber.nextLine().trim();
-				
-				if(pay.equals("1")) {
-					System.out.println("현금을 투입하세요");
-					
-					Scanner inputMoney = new Scanner(System.in);
-					int Money = Integer.parseInt(inputMoney.nextLine().trim());
-					
-					if(Money > needMoney) {
-						int Minus = Money - needMoney;
-						System.out.println("결제가 완료되었습니다. 거스름돈 "+Minus+"원을 가져가세요");
-						break;
-					} else if(Money == needMoney) {
-						System.out.println("결제가 완료되었습니다.");
-						break;
-					} else {
-						int More=needMoney-Money;
-						System.out.println("현금이 부족합니다"+More+"원을 투입하세요");
-						continue;
-					}
-	
-				} else if(pay.equals("2")) {
-					System.out.println("카드를 투입하세요");
-					System.out.println("결제가 완료되었습니다");
-					break;
-				} else {
-					System.out.println("선택하신 결제방법은 존재하지 않습니다. 다시 입력해주세요");
-					continue;
-				}		
 			}
-		} //while
+			
+			//이제 음료를 선택할 수 있습니다. 
+			Select.selection();	
+			
+			//금액이 남아있는 경우 계속해서 음료를 고를 수 있습니다
+			while(!(7==remainedMoney)) {
+				Select.selection();
+			}
+			
+        } // while	
+	} //start
+		 
+	private boolean isExitCommand(int inputtedMoney) {
+		return (7 == inputtedMoney);
+	}
 	
-		System.out.println("스무디를 받아가세요.");
-	} //main
-} //public class
+	private boolean isTooLess(int remainedMoney) {
+		return remainedMoney < 2800;
+	}
+
+	@SuppressWarnings("unused")
+	private boolean isStillEnough(int remainedMoney) {
+		return remainedMoney > 2800;
+
+	}
+	
+	//사용자의 입력값을 받아 inputtedMoney로 설정합니다
+	@SuppressWarnings("resource")
+	public int getInput() {
+		Scanner inputMoney = new Scanner(System.in);
+		int inputtedMoney = Integer.parseInt(inputMoney.nextLine().trim());
+		return inputtedMoney;
+	}
+
+	public static void howMuchRemain() {
+		System.out.println("현재 잔액은 "+remainMoney()+"원입니다"); 
+	}
+} //class
+
+
