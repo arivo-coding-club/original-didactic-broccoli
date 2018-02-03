@@ -1,13 +1,25 @@
 package application;
 
 public class Model {
-
-	//추가선택을 클릭할 경우 기존의 음료 가격에 새로운 음료 가격이 더해지고, 그렇지 않을 경우 하나의 음료 가격만 계산됩니다
-	public int calculate(String push, int x, int y) {
-		if(push.equals("5000")) {
-			return 5000-(x+y);
-		} else {
-			return 10000-(x+y); 
-		}
+	String newLine = "\n";
+	
+	private static int remain = 0;
+	
+	public void addRemain(int amount) {
+		remain += amount;
+	}
+	
+	public static int getRemain() {
+		return remain;
+	}
+	
+	public static void buy(int price) {
+		remain -= price;
+	}
+	
+	public int decreaseRemain() {
+		
+		remain -= 100;
+		return remain;
 	}
 }
