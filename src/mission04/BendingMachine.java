@@ -57,11 +57,6 @@ public class BendingMachine extends Casher{
 		return remainedMoney < 2800;
 	}
 
-	@SuppressWarnings("unused")
-	private boolean isStillEnough(int remainedMoney) {
-		return remainedMoney > 2800;
-
-	}
 	
 	//사용자의 입력값을 받아 inputtedMoney로 설정합니다
 	@SuppressWarnings("resource")
