@@ -18,14 +18,14 @@ public class Controller {
 		
 
 	@FXML
-	//ÅõÀÔÇÑ ±Ý¾×À» Ç¥½ÃÇÏ°í °è»êÇÕ´Ï´Ù
+	//íˆ¬ìž…í•œ ê¸ˆì•¡ì„ í‘œì‹œí•˜ê³  ê³„ì‚°í•©ë‹ˆë‹¤
 	private void push(ActionEvent event) {
 		result.setText(pushButton(event));
 	}
 	
-	//¿©±âºÎÅÍ´Â À½·á¸¦ Å¬¸¯ÇßÀ» ¶§, (1)ÅõÀÔÇÑ ±Ý¾×¿¡¼­ À½·á °¡°ÝÀ» »©°í (2)ÇØ´ç À½·á Àç°í¸¦ ÁÙÀÌ´Â ¹öÆ°ÀÔ´Ï´Ù
-	//´Ù¸¥ Å¬·¡½º·Î ¸¸µé·Á°í ÇßÁö¸¸ javafxÀÇ ¹öÆ°Àº ControllerÅ¬·¡½º¿¡ ÀÖ¾î¾ß ¿À·ù°¡ ³ªÁö ¾Ê¾Æ¼­ ¿©±â¿¡ ±×´ë·Î µÎ¾ú½À´Ï´Ù
-	//¡Ú¡Ú¡Ú¡Ú¡Ú??¸Þ¼Òµå·Î ¸¸µé¾î º¸·Á°í Çß´Âµ¥ ½ÇÆÐ. stock1, stock2µî stock+i·Î ¸¸µå´Â °ÍÀÌ ¿À·ù.
+	//ì—¬ê¸°ë¶€í„°ëŠ” ìŒë£Œë¥¼ í´ë¦­í–ˆì„ ë•Œ, (1)íˆ¬ìž…í•œ ê¸ˆì•¡ì—ì„œ ìŒë£Œ ê°€ê²©ì„ ë¹¼ê³  (2)í•´ë‹¹ ìŒë£Œ ìž¬ê³ ë¥¼ ì¤„ì´ëŠ” ë²„íŠ¼ìž…ë‹ˆë‹¤
+	//ë‹¤ë¥¸ í´ëž˜ìŠ¤ë¡œ ë§Œë“¤ë ¤ê³  í–ˆì§€ë§Œ javafxì˜ ë²„íŠ¼ì€ Controllerí´ëž˜ìŠ¤ì— ìžˆì–´ì•¼ ì˜¤ë¥˜ê°€ ë‚˜ì§€ ì•Šì•„ì„œ ì—¬ê¸°ì— ê·¸ëŒ€ë¡œ ë‘ì—ˆìŠµë‹ˆë‹¤
+	//â˜…â˜…â˜…â˜…â˜…??ë©”ì†Œë“œë¡œ ë§Œë“¤ì–´ ë³´ë ¤ê³  í–ˆëŠ”ë° ì‹¤íŒ¨. stock1, stock2ë“± stock+ië¡œ ë§Œë“œëŠ” ê²ƒì´ ì˜¤ë¥˜.
 	
 //	public void beverage(ActionEvent event, int i) {
 //		BeverageCalculation.beverageCalculation(event);
@@ -66,20 +66,20 @@ public class Controller {
 	}	
 	
 	@FXML
-	//Ä«µå¸¦ ÅõÀÔÇßÀ» °æ¿ì ÀÓÀÇÀÇ ¼ö 7À» ÀÔ·ÂÇØ¼­, Çö±Ý°áÁ¦°¡ ¾Æ´Ñ Ä«µå °áÁ¦°¡ µÇµµ·Ï ÇÕ´Ï´Ù
+	//ì¹´ë“œë¥¼ íˆ¬ìž…í–ˆì„ ê²½ìš° ìž„ì˜ì˜ ìˆ˜ 7ì„ ìž…ë ¥í•´ì„œ, í˜„ê¸ˆê²°ì œê°€ ì•„ë‹Œ ì¹´ë“œ ê²°ì œê°€ ë˜ë„ë¡ í•©ë‹ˆë‹¤
 	private void card(ActionEvent event) throws Exception{
-		result.setText("Ä«µå ÅõÀÔ¿Ï·á\nÀ½·á¸¦ °í¸£¼¼¿ä");
+		result.setText("ì¹´ë“œ íˆ¬ìž…ì™„ë£Œ\nìŒë£Œë¥¼ ê³ ë¥´ì„¸ìš”");
 		model.addRemain(7);
 	}
 	
 	@FXML
-	//Àç°í¸¦ ¾Ë·ÁÁÝ´Ï´Ù
+	//ìž¬ê³ ë¥¼ ì•Œë ¤ì¤ë‹ˆë‹¤
 	private void stock(ActionEvent event) {
 		result.setText(Stock.HowManyBeverageRemain());
 	}
 	
 	@FXML
-	//°Å½º¸§µ·À» ¹ÝÈ¯ÇÕ´Ï´Ù
+	//ê±°ìŠ¤ë¦„ëˆì„ ë°˜í™˜í•©ë‹ˆë‹¤
 	private void change(ActionEvent event) {
 		changeButton(event);
 	}
@@ -88,22 +88,22 @@ public class Controller {
 	public String pushButton(ActionEvent event) {
 		int amount = Integer.parseInt(((Button)event.getSource()).getText());
 		
-		// ÅõÀÔ±Ý¾×¿¡ Ãß°¡
+		// íˆ¬ìž…ê¸ˆì•¡ì— ì¶”ê°€
 		model.addRemain(amount);
 		
-		//ÀüÃ¼ ÅõÀÔµÈ ±Ý¾×À» result¿¡ Ç¥½Ã 	
+		//ì „ì²´ íˆ¬ìž…ëœ ê¸ˆì•¡ì„ resultì— í‘œì‹œ 	
 		return Model.getRemain()+"";
 	}
 
 	public void changeButton(ActionEvent event) {
 		if(Model.getRemain()==7) {
-			result.setText("Ä«µå ¹ÝÈ¯¿Ï·á");
-			//Ä«µå ¹ÝÈ¯½Ã ÀÓÀÇÀÇ º¯¼ö 7À» Á¦ÇÔ. ÀÌ¶§, Ä«µå¸¦ »©Áö ¾Ê°í Çö±ÝÀ» ÅõÀÔÇÒ °æ¿ì ¿À·ù ¹ß»ý
+			result.setText("ì¹´ë“œ ë°˜í™˜ì™„ë£Œ");
+			//ì¹´ë“œ ë°˜í™˜ì‹œ ìž„ì˜ì˜ ë³€ìˆ˜ 7ì„ ì œí•¨. ì´ë•Œ, ì¹´ë“œë¥¼ ë¹¼ì§€ ì•Šê³  í˜„ê¸ˆì„ íˆ¬ìž…í•  ê²½ìš° ì˜¤ë¥˜ ë°œìƒ
 			Model.buy(7);
-			//return "Ä«µå ¹ÝÈ¯¿Ï·á";
+			//return "ì¹´ë“œ ë°˜í™˜ì™„ë£Œ";
 		} else {	
 		new Thread(() ->  {
-			// ÀÛ¾÷ ½º·¹µå (UI ½º·¹µå°¡¾Æ´Ô)
+			// ìž‘ì—… ìŠ¤ë ˆë“œ (UI ìŠ¤ë ˆë“œê°€ì•„ë‹˜)
 			while (Model.getRemain() > 100) {
 				try {
 					Thread.sleep(100);

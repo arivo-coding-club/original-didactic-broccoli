@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	@Override
-	//JavaFx·Î ÀÚÆÇ±â¸¦ ¸¸µé°í ÀÌ¸§À» BendingMachineÀÌ¶ó°í Çß½À´Ï´Ù
+	//JavaFxë¡œ ìíŒê¸°ë¥¼ ë§Œë“¤ê³  ì´ë¦„ì„ BendingMachineì´ë¼ê³  í–ˆìŠµë‹ˆë‹¤
 	public void start(Stage stage) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("bending1.fxml"));
 		stage.setScene(new Scene(root));

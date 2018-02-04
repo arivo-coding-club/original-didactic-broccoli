@@ -9,11 +9,11 @@ public class BeverageCalculation extends Controller{
 		int price = Integer.parseInt(((Button) event.getSource()).getText());
 		
 		if(Model.getRemain()==7) {
-			return price+"¿ø °áÁ¦¿Ï·á";
+			return price+"ì› ê²°ì œì™„ë£Œ";
 		}
 
 		else if(Model.getRemain() < price) {
-			return "ÀÜ¾×ºÎÁ·";
+			return "ì”ì•¡ë¶€ì¡±";
 			
 		} else {
 			Model.buy(price);

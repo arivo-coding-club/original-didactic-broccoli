@@ -9,70 +9,70 @@ public class Stock{
 	private static int beverageRemain6 = 10;
 
 	
-	//??ÁöÀúºĞÇÑ ÄÚµå -> Ã³¸® ÇÊ¿ä 
+	//??ì§€ì €ë¶„í•œ ì½”ë“œ -> ì²˜ë¦¬ í•„ìš” 
 	public static String stock1() { 
 	
 		if(beverageRemain1 == 0) 
-			return "Àç°íºÎÁ·";
+			return "ì¬ê³ ë¶€ì¡±";
 		beverageRemain1 -= 1;
 			int price = 2800;
-			return price+"¿ø °áÁ¦¿Ï·á"; }
+			return price+"ì› ê²°ì œì™„ë£Œ"; }
 	
 
 	public static String stock2() { 
 		if(beverageRemain2 == 0)
-			return "Àç°íºÎÁ·";
+			return "ì¬ê³ ë¶€ì¡±";
 		beverageRemain2 -= 1; 
 			int price = 3000;
-			return price+"¿ø °áÁ¦¿Ï·á"; }
+			return price+"ì› ê²°ì œì™„ë£Œ"; }
 		
 	public static String stock3() { 
 		if(beverageRemain3 == 0)
-			return "Àç°íºÎÁ·";
+			return "ì¬ê³ ë¶€ì¡±";
 		beverageRemain3 -= 1; 
 			int price = 3500;
-			return price+"¿ø °áÁ¦¿Ï·á"; }
+			return price+"ì› ê²°ì œì™„ë£Œ"; }
 		
 	public static String stock4() {
 		if(beverageRemain4 == 0)
-			return "Àç°íºÎÁ·";
+			return "ì¬ê³ ë¶€ì¡±";
 		beverageRemain4 -= 1; 
 			int price = 2500;
-			return price+"¿ø °áÁ¦¿Ï·á"; }
+			return price+"ì› ê²°ì œì™„ë£Œ"; }
 		
 	public static String stock5() { 
 		if(beverageRemain5 == 0)
-			return "Àç°íºÎÁ·";
+			return "ì¬ê³ ë¶€ì¡±";
 		beverageRemain5 -= 1; 
 			int price = 2800;
-			return price+"¿ø °áÁ¦¿Ï·á"; }
+			return price+"ì› ê²°ì œì™„ë£Œ"; }
 		
 	public static String stock6() {
 		
 		if(beverageRemain6 == 0)
-			return "Àç°íºÎÁ·";
+			return "ì¬ê³ ë¶€ì¡±";
 		beverageRemain6 -= 1; 
 			int price = 500;
-			return price+"¿ø °áÁ¦¿Ï·á"; }
+			return price+"ì› ê²°ì œì™„ë£Œ"; }
 		
 
 	public static String HowManyBeverageRemain() {
-		return ("ÃÊÄÚ¿À·¹¿À: "+beverageRemain1+"°³\n"
-				+ "¹ÎÆ®¿À·¹¿À: "+beverageRemain2+"°³\n"
-				+ "¹Ù´Ò¶óÇÁ¶ı: "+beverageRemain3+"°³\n" 
-				+ "³ìÂ÷¶ó¶¼(H): "+beverageRemain4+"°³\n"
-				+ "³ìÂ÷¶ó¶¼(I): "+beverageRemain5+"°³\n"
-				+ "¹öºí: "+beverageRemain6+"°³");
+		return ("ì´ˆì½”ì˜¤ë ˆì˜¤: "+beverageRemain1+"ê°œ\n"
+				+ "ë¯¼íŠ¸ì˜¤ë ˆì˜¤: "+beverageRemain2+"ê°œ\n"
+				+ "ë°”ë‹ë¼í”„ë–: "+beverageRemain3+"ê°œ\n" 
+				+ "ë…¹ì°¨ë¼ë–¼(H): "+beverageRemain4+"ê°œ\n"
+				+ "ë…¹ì°¨ë¼ë–¼(I): "+beverageRemain5+"ê°œ\n"
+				+ "ë²„ë¸”: "+beverageRemain6+"ê°œ");
 	}
 
 	
-	//¡Ú¡Ú¡Ú¡Ú¡Ú??ÀÛµ¿ÇÏÁö ¾Ê´Â ¸Ş¼Òµå. À§ÀÇ stock(i)¸¦ °£´ÜÇÏ°Ô Ç¥ÇöÇÏ±â À§ÇÑ ¸Ş¼Òµå ÀÛ¼º ÇÊ¿ä
+	//â˜…â˜…â˜…â˜…â˜…??ì‘ë™í•˜ì§€ ì•ŠëŠ” ë©”ì†Œë“œ. ìœ„ì˜ stock(i)ë¥¼ ê°„ë‹¨í•˜ê²Œ í‘œí˜„í•˜ê¸° ìœ„í•œ ë©”ì†Œë“œ ì‘ì„± í•„ìš”
 //	public static String HowMuchStock(int i){
 //		int beverageRemain= Integer.parseInt("beverageRemain"+i);
 //		if(beverageRemain==0)
-//			return "Àç°íºÎÁ·";
+//			return "ì¬ê³ ë¶€ì¡±";
 //		 beverageRemain -= 1;
-//			return "500 ¿ø °áÁ¦¿Ï·á";
+//			return "500 ì› ê²°ì œì™„ë£Œ";
 //	}
 
 	
