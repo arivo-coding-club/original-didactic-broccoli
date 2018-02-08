@@ -45,6 +45,35 @@ public class AirConditioner extends Boiler {
 		}
 	}
 	
+	
+//	public void turnUp() {
+//		Up(Volumn, MAX_Volumn);
+//	}
+//	
+//	public void turnDown() {
+//		Down(Volumn, MIN_Volumn);
+//	}
+//
+// 상위 클래스	
+//
+//	public void Up(int Volumn, int MAX_Volumn) {
+//		if(Volumn == MAX_Volumn) {
+//			return Volumn = MAX_Volumn;
+//		} else {
+//			return ++Volumn;
+//		}
+//	}
+//	
+//	public void Down(int Volumn, int MIN_Volumn) {
+//		if(Volumn == MIN_Volumn) {
+//			return Volumn = MIN_Volumn;
+//		} else {
+//			return --Volumn;
+//		}
+//	}
+	
+	
+	
 	@Override
 	public void turnDown() {
 		if(temperature == MIN_TEMPERATURE) {

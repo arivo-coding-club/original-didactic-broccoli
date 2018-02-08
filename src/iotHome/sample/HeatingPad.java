@@ -10,6 +10,7 @@ public class HeatingPad extends MinMaxControl {
 		super(MIN_TEMPERATURE);
 	}
 
+	//getMin을 자손클래스에서 구현
 	@Override
 	int getMin() {
 		return MIN_TEMPERATURE;

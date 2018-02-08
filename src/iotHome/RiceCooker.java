@@ -6,51 +6,49 @@ public class RiceCooker implements turnable {
 	private boolean on;
 	
 	private int cookButton = 0;
+	private String[] statusMessage = {"Waiting", "PowerOn", "Keeping", "Cooking"};
 	
-	private static final int MIN_COOKBUTTON = 0;
-	private static final int MAX_COOKBUTTON= 3;
-	
+	//toggle(번갈아서 상태가 움직이는 것)
+	//의미에 맞춘 메서드 이름을 갖기
+	//arraylist의 add처럼 다른 사람이 의미 몰라도 사용할 수 있도록!!
 	public void turnOn() {
 		on = !on;
 	}
 	
-	public void turnUp() {
-		if(cookButton == MAX_COOKBUTTON) {
-			cookButton = MAX_COOKBUTTON ;
-		} else {
-			cookButton++;
-		} 
+	public void printStatus() {
+		System.out.println(toString());
 	}
+	
+	public String getStatusMessage() {
+		if(on) {
+				return statusMessage[cookButton];
+			} 		
+			return "OFF";
+	}
+	
+	public void turnUp() {
+		if(!(cookButton==statusMessage.length-1)) {
+			cookButton++;
+		}
+	}
+	
+		
 	
 	public void turnDown() {
-		if(cookButton == MIN_COOKBUTTON) {
-			cookButton = MIN_COOKBUTTON ;
+		if(cookButton==0) {
+			System.out.println("MIN");
 		} else {
-			cookButton++;
+			cookButton--;
 		}
 	}
-	
-	//turnOn을 해도 cook이 실행되지 않음
-	public void cook(int cookButton) {
-		if(cookButton == 0) {
-		} else if(cookButton == 1) {
-			System.out.println("PowerOn");
-		} else if(cookButton == 2) {
-			System.out.println("Keeping");
-		} else {
-			System.out.println("Cooking");
-		}
-	}
-	
-	
+		
 	
 	@Override
+	// 이 객체를 문자열로 바꾼다면 어떻게 될까?라는 뜻임
+	//toString은 내용만 보여주도록 해야 사용자가 예상한 대로 작동함
 	public String toString() {
-		cook(cookButton);
-		if(on) {
-			return "Current cook : ";
-		} else {
-			return "Current Status : Off";
-		}
-	}
-}
+		//return "Current Status: " + getStatusMessage();
+		return "Current Status: " + getStatusMessage() + ", cookButton: " + cookButton;
+	} 
+}	
+

@@ -3,14 +3,17 @@ package iotHome.sample;
 public abstract class MinMaxControl {
 	private int value;
 	
+	//초기값을 받아서 value에 담아줌
 	public MinMaxControl(int initialValue) {
 		this.value = initialValue;
 	}
 	
+	//setter
 	public void setValue(int value) {
 		this.value = value;
 	}
 	
+	//getter
 	public int getValue() {
 		return value;
 	}

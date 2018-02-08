@@ -1,7 +1,8 @@
 package iotHome;
 
 public class IoTHome {
-
+//인터페이스는 메서드의 모양만 넣을수 있는 클래스(인터페이스 : 수식어로 짓기. turunable이 되는 TV. 이름첫문자는 대문자로! 클래스처럼)
+//추상 클래스는 추상메서드를 가질 수 있는 메서드
 	interface turnable{
 		void turnOn();
 	}
@@ -39,7 +40,7 @@ public class IoTHome {
 		void cook();
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		AirCleaner aircleaner = new AirCleaner();
 		AirConditioner airConditioner = new AirConditioner();
 		Boiler boiler = new Boiler();
@@ -62,12 +63,30 @@ public class IoTHome {
 	
 		
 		//테스트
-		System.out.println(riceCooker.toString());
+//		System.out.println(riceCooker.printMessage());
+//		System.out.println();
+//		riceCooker.turnOn();
+//		System.out.println(riceCooker.printStatus());
+//		System.out.println();
+//		riceCooker.turnUp();
+//		// 이 cook은 결과가 뜨지 않는 오류가 납니다..
+//		System.out.println(riceCooker.printStatus()); //
+//
+//		
 		riceCooker.turnOn();
-		System.out.print(riceCooker.toString());
+		riceCooker.printStatus();
+		
 		riceCooker.turnUp();
-		// 이 cook은 결과가 뜨지 않는 오류가 납니다..
-		System.out.print(riceCooker.toString());
+		riceCooker.printStatus();
+		
+		riceCooker.turnUp();
+		riceCooker.printStatus();
+		
+		riceCooker.turnUp();
+		riceCooker.printStatus();
+		
+		riceCooker.turnUp();
+		riceCooker.printStatus();
 	}
 }
 
