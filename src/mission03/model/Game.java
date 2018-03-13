@@ -39,7 +39,10 @@ public class Game {
 
             List<Position> emptyPositions = board.getEmptyPositions();
             System.out.println(currentPlayer.getName() + "님 차례입니다.");
+            
+            // TODO try-catch로 에러제어
             Position position = currentPlayer.play(emptyPositions);
+            
             board.make(currentPlayer, position);
             board.print();
             System.out.println();

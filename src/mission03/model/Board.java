@@ -93,6 +93,18 @@ public class Board {
 
     private String getSymbol(int x, int y) {
         return Optional.ofNullable(grid[x][y])
+    /**
+     * Returns an {@code Optional} describing the given value, if
+     * non-{@code null}, otherwise returns an empty {@code Optional}.
+     *
+     * @param value the possibly-{@code null} value to describe
+     * @param <T> the type of the value
+     * @return an {@code Optional} with a present value if the specified value
+     *         is non-{@code null}, otherwise an empty {@code Optional}
+     */
+//    public static <T> Optional<T> ofNullable(T value) {
+//        return value == null ? empty() : of(value);
+//    }
                 .map(Piece::getPlayer)
                 .map(Player::getSymbol)
                 .orElse(" ");
