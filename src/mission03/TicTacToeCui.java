@@ -84,6 +84,8 @@ public class TicTacToeCui {
         });
     }
 
+    
+    //exit이 true면 왜 종료되지?
     void exit() {
         this.exit = true;
     }

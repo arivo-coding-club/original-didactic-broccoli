@@ -20,6 +20,7 @@ public class Board {
         this.grid = new Piece[BOARD_SIZE][BOARD_SIZE];
     }
 
+    //빈공간이 있는지 알아보기
     public List<Position> getEmptyPositions() {
         List<Position> emptyPositions = new ArrayList<>();
 
@@ -81,6 +82,7 @@ public class Board {
         return false;
     }
 
+    //천재
     private boolean isTicTacToe(int row, int rowDirection, int col, int colDirection) {
         Piece p1 = grid[row][col];
         Piece p2 = grid[row + rowDirection][col + colDirection];
